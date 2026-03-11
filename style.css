@@ -1,0 +1,70 @@
+/* body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(160deg,#ff9a9e,#fad0c4,#1a2a6c);
+color:white;
+overflow:hidden;
+} */
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background: radial-gradient(circle at 30% 20%, #1b2735, #090a0f 70%);
+    background-size:200% 200%;
+    animation: skyMove 20s ease-in-out infinite alternate;
+    color:white;
+    overflow-x:hidden;
+}
+
+@keyframes skyMove{
+    0%{
+        background-position:0% 0%;
+    }
+    100%{
+        background-position:100% 100%;
+    }
+}
+
+#container{
+margin: auto;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+max-width: 90%;
+}
+
+#container h1{
+font-size:42px;
+letter-spacing:2px;
+margin-bottom:20px;
+color:#ffd700;
+}
+
+#userName{
+padding:12px 20px;
+border:none;
+border-radius:25px;
+font-size:16px;
+width:240px;
+outline:none;
+}
+
+#startBtn{
+margin-top:15px;
+padding:12px 28px;
+border:none;
+border-radius:25px;
+background:#ffd700;
+color:black;
+font-weight:bold;
+cursor:pointer;
+}
+
+h1{
+font-size: clamp(28px, 5vw, 48px);
+text-align:center;
+padding:0 20px;
+line-height:1.3;
+}
