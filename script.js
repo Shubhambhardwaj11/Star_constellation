@@ -21,8 +21,7 @@ button.addEventListener("click",function(){
     container.style.display = "none"
     ctx.fillStyle = "white"
 
-    let fontSize = Math.min(120, canvas.width / (name.length * 1.5))
-    ctx.font = fontSize + "px Arial"
+    ctx.textBaseline = "middle"
     ctx.textAlign = "center"
     let textWidth = ctx.measureText(name).width
     let textX = Math.random() * (canvas.width - textWidth - 200) + 100
