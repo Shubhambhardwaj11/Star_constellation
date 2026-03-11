@@ -153,7 +153,7 @@ function drawGalaxy(){
 }
 function createGalaxy(){
 
-    for(let i = 0; i < 1000; i++){
+    for(let i = 0; i < 500; i++){
 
         galaxyStars.push({
             x: Math.random() * canvas.width,
