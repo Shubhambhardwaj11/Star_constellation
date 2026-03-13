@@ -11,6 +11,16 @@ canvas.height = window.innerHeight
 
 createGalaxy()
 
+let input = document.getElementById("userName")
+
+input.addEventListener("keypress", function(event){
+
+if(event.key === "Enter"){
+button.click()
+}
+
+})
+
 
 button.addEventListener("click",function(){
     let name = document.getElementById("userName").value
@@ -19,18 +29,20 @@ button.addEventListener("click",function(){
     }
     else{
     container.style.display = "none"
+
+    
     ctx.fillStyle = "white"
+    ctx.font = "120px Arial"
 
     ctx.textBaseline = "middle"
     ctx.textAlign = "center"
-    let textWidth = ctx.measureText(name).width
-    let textX = Math.random() * (canvas.width - textWidth - 200) + 100
-    let textY = Math.random() * (canvas.height - 200) + 100
+    let textX = canvas.width/2
+    let textY = canvas.height/2
     ctx.fillText(name, textX,textY)
     let imageData = ctx.getImageData(0,0,canvas.width,canvas.height)
 
     ctx.clearRect(0,0,canvas.width,canvas.height)
-stars = []
+    stars = []
 
 for (let y = 0; y < canvas.height; y += 8) {
     for (let x = 0; x < canvas.width; x += 8) {
